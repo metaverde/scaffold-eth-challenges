@@ -625,61 +625,58 @@ function App(props) {
               </Card>
             </div>
 
-            {/*Extra UI for buying the tokens back from the user using "approve" and "sellTokens"
-            <Divider />
-            <div style={{ padding: 8, marginTop: 32, width: 300, margin: "auto" }}>
-              <Card title="Sell Tokens">
-                <div style={{ padding: 8 }}>{tokensPerEth && tokensPerEth.toNumber()} tokens per ETH</div>
-
-                <div style={{ padding: 8 }}>
-                  <Input
-                    style={{ textAlign: "center" }}
-                    placeholder={"amount of tokens to sell"}
-                    value={tokenSellAmount}
-                    onChange={e => {
-                      setTokenSellAmount(e.target.value);
-                    }}
-                  />
-                  <Balance balance={ethValueToSellTokens} dollarMultiplier={price} />
-                </div>
-                {isSellAmountApproved?
+            {/*Extra UI for buying the tokens back from the user using "approve" and "sellTokens"*/
+            <><Divider /><div style={{ padding: 8, marginTop: 32, width: 300, margin: "auto" }}>
+                <Card title="Sell Tokens">
+                  <div style={{ padding: 8 }}>{tokensPerEth && tokensPerEth.toNumber()} tokens per ETH</div>
 
                   <div style={{ padding: 8 }}>
-                    <Button
-                      type={"primary"}
-                      loading={buying}
-                      onClick={async () => {
-                        setBuying(true);
-                        await tx(writeContracts.Vendor.sellTokens(tokenSellAmount && ethers.utils.parseEther(tokenSellAmount)));
-                        setBuying(false);
-                        setTokenSellAmount("");
-                      }}
-                    >
-                      Sell Tokens
-                    </Button>
+                    <Input
+                      style={{ textAlign: "center" }}
+                      placeholder={"amount of tokens to sell"}
+                      value={tokenSellAmount}
+                      onChange={e => {
+                        setTokenSellAmount(e.target.value);
+                      } } />
+                    <Balance balance={ethValueToSellTokens} dollarMultiplier={price} />
                   </div>
-                  :
-                  <div style={{ padding: 8 }}>
-                    <Button
-                      type={"primary"}
-                      loading={buying}
-                      onClick={async () => {
-                        setBuying(true);
-                        await tx(writeContracts.YourToken.approve(readContracts.Vendor.address, tokenSellAmount && ethers.utils.parseEther(tokenSellAmount)));
-                        setBuying(false);
-                        setTokenSellAmount("");
-                      }}
-                    >
-                      Approve Tokens
-                    </Button>
-                  </div>
-                }
+                  {isSellAmountApproved ?
+
+                    <div style={{ padding: 8 }}>
+                      <Button
+                        type={"primary"}
+                        loading={buying}
+                        onClick={async () => {
+                          setBuying(true);
+                          await tx(writeContracts.Vendor.sellTokens(tokenSellAmount && ethers.utils.parseEther(tokenSellAmount)));
+                          setBuying(false);
+                          setTokenSellAmount("");
+                        } }
+                      >
+                        Sell Tokens
+                      </Button>
+                    </div>
+                    :
+                    <div style={{ padding: 8 }}>
+                      <Button
+                        type={"primary"}
+                        loading={buying}
+                        onClick={async () => {
+                          setBuying(true);
+                          await tx(writeContracts.YourToken.approve(readContracts.Vendor.address, tokenSellAmount && ethers.utils.parseEther(tokenSellAmount)));
+                          setBuying(false);
+                          setTokenSellAmount("");
+                        } }
+                      >
+                        Approve Tokens
+                      </Button>
+                    </div>}
 
 
-              </Card>
-            </div>
+                </Card>
+              </div></>
 
-            */}
+            }
 
             <div style={{ padding: 8, marginTop: 32 }}>
               <div>Vendor Token Balance:</div>
