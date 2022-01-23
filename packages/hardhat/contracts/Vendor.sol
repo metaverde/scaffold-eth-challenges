@@ -57,9 +57,13 @@ contract Vendor is Ownable {
     return (ethAmount);
   }*/
 
-  function sellTokens(uint256 amountOfTokens) public {
+  function sellTokens(uint256 amountOfTokens) public payable {
     yourToken.transferFrom(msg.sender, address(this), amountOfTokens);
-
+    /*require(msg.value > 0, "Tokens needed to get the eth!");*/
+    /*For some reason this messes with my ability to sell tokens*/
+    uint256 sellerBalance = yourToken.balanceOf(msg.sender);
+    require(sellerBalance >= msg.value, "Too many tokens! Don't be greedy.");
+    
     (bool success, ) = msg.sender.call{value: amountOfTokens/tokensPerEth}("");
     require(success, "ETH withdrawal failed!");
 
