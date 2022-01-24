@@ -8,7 +8,7 @@ contract YourToken is ERC20 {
     // ToDo: add constructor and mint tokens for deployer,
     //       you can use the above import for ERC20.sol. Read the docs ^^^
 
-    constructor() ERC20("Gold", "GLD") {
-        _mint(msg.sender, 1000 * 10 ** 18);
+    constructor() ERC20("HoneySweet", "HST") {
+        _mint(msg.sender, 100000 * 10 ** 18);
     }
 }
