@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <a href="/" /*target="_blank" rel="noopener noreferrer"*/>
       <PageHeader
-        title="🏗 scaffold-eth"
+        title="🏗 Mighty Mighty Scaffold-Eth"
         subTitle="forkable Ethereum dev stack focused on fast product iteration"
         style={{ cursor: "pointer" }}
       />
