@@ -519,125 +519,47 @@ function App(props) {
   // the json for the nfts
   const json = {
     1: {
-      description: "It's actually a bison?",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/buffalo.jpg",
-      name: "Buffalo",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "green",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 42,
-        },
-      ],
+      "name": "Ethereal",
+      "description": "Send Vitalik his Zebra!",
+      "external_url": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/polkadotzebra.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/polkadotzebra.jpg"
+      
     },
     2: {
-      description: "What is it so worried about?",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/zebra.jpg",
-      name: "Zebra",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "blue",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 38,
-        },
-      ],
+      "name": "Pangolin",
+      "description": "Not food!",
+      "external_url": "https://gateway.pinata.cloud/ipfs/QmNmd8N2USeikeUau9o6TTpbKVkMK5kUN345nsjdqHbayN/pangolin.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNmd8N2USeikeUau9o6TTpbKVkMK5kUN345nsjdqHbayN/pangolin.jpg"
+      
     },
     3: {
-      description: "What a horn!",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/rhino.jpg",
-      name: "Rhino",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "pink",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 22,
-        },
-      ],
+      "name": "Another Pangolin",
+      "description": "On the prowl.",
+      "external_url": "https://gateway.pinata.cloud/ipfs/QmNmd8N2USeikeUau9o6TTpbKVkMK5kUN345nsjdqHbayN/pangolin1.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNmd8N2USeikeUau9o6TTpbKVkMK5kUN345nsjdqHbayN/pangolin1.jpg"
+      
     },
-    4: {
-      description: "Is that an underbyte?",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/fish.jpg",
-      name: "Fish",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "blue",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 15,
-        },
-      ],
+    4: 
+    {
+      "name": "Nightmare Elk",
+      "description": "Still too soon.",
+      "external_url": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/nightmareelk.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/nightmareelk.jpg"
+      
     },
     5: {
-      description: "So delicate.",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/flamingo.jpg",
-      name: "Flamingo",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "black",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 6,
-        },
-      ],
+      "name": "Baby Tail",
+      "description": "Will it scale?",
+      "external_url": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/pangbabytail.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/pangbabytail.jpg"
+         
     },
     6: {
-      description: "Raaaar!",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/godzilla.jpg",
-      name: "Godzilla",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "orange",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 99,
-        },
-      ],
-    },
+      "name": "Rolly Poly",
+      "description": "Pangolin.",
+      "external_url": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/rollingpang.jpg",
+      "image": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/rollingpang.jpg"
+    }
   };
 
   const mintItem = async () => {
