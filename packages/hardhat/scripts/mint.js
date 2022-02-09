@@ -23,30 +23,18 @@ const main = async () => {
   const { deployer } = await getNamedAccounts();
   const yourCollectible = await ethers.getContract("YourCollectible", deployer);
 
-  const buffalo = {
-    description: "It's actually a bison?",
-    external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-    image: "https://austingriffith.com/images/paintings/buffalo.jpg",
-    name: "Buffalo",
-    attributes: [
-      {
-        trait_type: "BackgroundColor",
-        value: "green",
-      },
-      {
-        trait_type: "Eyes",
-        value: "googly",
-      },
-      {
-        trait_type: "Stamina",
-        value: 42,
-      },
-    ],
+  const Ethereal = {
+    
+    "name": "Ethereal",
+    "description": "Send Vitalik his Zebra!",
+    "external_url": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/polkadotzebra.jpg",
+    "image": "https://gateway.pinata.cloud/ipfs/QmNmUnJfh4nTE8kRs3Fy7e4DUW2Ymapa9nW8Y9QpCkrq6R/polkadotzebra.jpg"
+    },
   };
-  console.log("Uploading buffalo...");
-  const uploaded = await ipfs.add(JSON.stringify(buffalo));
+  console.log("Uploading Ethereal...");
+  const uploaded = await ipfs.add(JSON.stringify(Ethereal));
 
-  console.log("Minting buffalo with IPFS hash (" + uploaded.path + ")");
+  console.log("Minting Ethereal with IPFS hash (" + uploaded.path + ")");
   await yourCollectible.mintItem(toAddress, uploaded.path, {
     gasLimit: 400000,
   });
