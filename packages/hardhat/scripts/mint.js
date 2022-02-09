@@ -41,30 +41,17 @@ const main = async () => {
 
   await sleep(delayMS);
 
-  const zebra = {
-    description: "What is it so worried about?",
-    external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-    image: "https://austingriffith.com/images/paintings/zebra.jpg",
-    name: "Zebra",
-    attributes: [
-      {
-        trait_type: "BackgroundColor",
-        value: "blue",
-      },
-      {
-        trait_type: "Eyes",
-        value: "googly",
-      },
-      {
-        trait_type: "Stamina",
-        value: 38,
-      },
-    ],
+  const Pangolin = {
+    "name": "Pangolin",
+    "description": "Not food!",
+    "external_url": "https://gateway.pinata.cloud/ipfs/QmNmd8N2USeikeUau9o6TTpbKVkMK5kUN345nsjdqHbayN/pangolin.jpg",
+    "image": "https://gateway.pinata.cloud/ipfs/QmNmd8N2USeikeUau9o6TTpbKVkMK5kUN345nsjdqHbayN/pangolin.jpg"
+    
   };
-  console.log("Uploading zebra...");
+  console.log("Uploading Pangolin...");
   const uploadedzebra = await ipfs.add(JSON.stringify(zebra));
 
-  console.log("Minting zebra with IPFS hash (" + uploadedzebra.path + ")");
+  console.log("Minting Pangolin with IPFS hash (" + uploadedzebra.path + ")");
   await yourCollectible.mintItem(toAddress, uploadedzebra.path, {
     gasLimit: 400000,
   });
