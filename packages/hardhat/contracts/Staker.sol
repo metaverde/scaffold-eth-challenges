@@ -72,6 +72,7 @@ contract Staker {
   
   // if the `threshold` was not met, allow everyone to call a `withdraw()` function
   // Add a `withdraw(address payable)` function lets users withdraw their balance
+  //In public functions, Solidity immediately copies array arguments to memory, while external functions can read directly from calldata.
   function withdraw(address payable user) external exceededDeadline thresholdNotReached notCompleted {
       require(balances[user] != 0, "User's balance is 0, can't withdraw.");
       uint256 withdrawAmount = balances[user];
