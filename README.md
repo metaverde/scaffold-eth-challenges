@@ -10,6 +10,9 @@
 
 # Checkpoint 0: 📦 Install 📚
 
+Want a fresh cloud environment? Click this to open a gitpod workspace, then skip to Checkpoint 1 after the tasks are complete.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scaffold-eth/scaffold-eth-challenges/tree/challenge-0-simple-nft)
 
 Required: 
 * [Git](https://git-scm.com/downloads)
@@ -127,7 +130,7 @@ yarn deploy
 yarn deploy
 ```
 
-> 💬 Hint: You can set the `defaultNetwork` in `hardhat.config.js` to `Rinkeby` OR you can `yarn deploy --network Rinkeby`. 
+> 💬 Hint: You can set the `defaultNetwork` in `hardhat.config.js` to `Rinkeby` OR you can `yarn deploy --network rinkeby`. 
 
 ---
 
@@ -158,9 +161,18 @@ yarn surge
 ```
 (You could also `yarn s3` or maybe even `yarn ipfs`?)
 
+⚠️ Run the automated testing function to make sure your app passes
+
+```sh
+yarn test
+```
+![testOutput](https://user-images.githubusercontent.com/12072395/152587433-8314f0f1-5612-44ae-bedb-4b3292976a9f.PNG)
+
+---
+
 # Checkpoint 5: 📜 Contract Verification
 
-Update the api-key in packages/hardhat/package.json file. You can get your key [here](https://etherscan.io/myapikey).
+Update the `api-key` in `packages/hardhat/package.json` file. You can get your key [here](https://etherscan.io/myapikey).
 
 ![Screen Shot 2021-11-30 at 10 21 01 AM](https://user-images.githubusercontent.com/9419140/144075208-c50b70aa-345f-4e36-81d6-becaa5f74857.png)
 
@@ -183,7 +195,16 @@ Update the api-key in packages/hardhat/package.json file. You can get your key [
 # ⚔️ Side Quests
 
 ## 🐟 Open Sea
-> Add your contract to OpenSea ( create -> submit NFTs -> "or add an existing contract")
+> Add your contract to OpenSea
+> 1. hover over your profile photo in the top right and navigate to `Collections` or go to `https://opensea.io/collections`
+> ![my_collections](https://user-images.githubusercontent.com/46639943/150223014-92a2e32d-d2a2-4fd4-ac3b-bd2d0fcb5840.png)
+> 2. click the vertical elipsis and select `Import an existing smart contract`
+> ![import_contract](https://user-images.githubusercontent.com/46639943/150225448-815a17c1-4ea6-4663-8aff-8f757bebbb54.png)
+> 3. select `Live on a testnet`
+> ![live_on_testnet](https://user-images.githubusercontent.com/46639943/150229334-038100bb-22e0-4240-a293-c2b88adc1219.png)
+> 4. be sure you're on the same network you deployed to and enter your contract address!
+> ![contract_address](https://user-images.githubusercontent.com/46639943/150229361-e50e8c57-3918-450f-8bee-29cf42d65b52.png)
+
 
 (It can take a while before they show up, but here is an example:)
 https://testnets.opensea.io/assets/0xc2839329166d3d004aaedb94dde4173651babccf/1
